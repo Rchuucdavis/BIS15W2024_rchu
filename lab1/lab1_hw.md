@@ -1,11 +1,11 @@
 ---
 title: "Lab 1 Homework"
 author: "Ryan Chu"
-date: "2024-01-11"
+date: "2024-01-16"
 output:
   html_document: 
     theme: spacelab
-    keep_md: yes
+    keep_md: true
 ---
 
 ## Instructions
@@ -16,7 +16,7 @@ Make sure to use the formatting conventions of RMarkdown to make your report nea
 **1. Please complete the [class survey](https://forms.gle/AHHXd3aobaAdkkFg9) if you have not already done so.**
 
 **2. What is the difference between R and RStudio? What is GitHub and why is it useful to programmers?**  
-
+R is a programming language while RStudio is a software used to write code in R. GitHub is a platform used to store and share code. It is very useful for programmers as the code is all stored online and can be shared. 
 
 
 **3. Navigate to my [BIS15L](https://github.com/jmledford3115/BIS15LW2021_jledford) repository on GitHub. Notice that near the bottom there is a nice, clean description of the repository. You want this on your repository! It is built by making edits to the `README.md` file using the RMarkdown conventions. Edit your repository's `README.md` file so that you have a clean informative description, including your email address. Be creative! You don't need to just copy mine. There are lots of examples online.**  
@@ -53,7 +53,7 @@ Make sure to use the formatting conventions of RMarkdown to make your report nea
 
 
 ```r
-(8 / 2) * 2
+8 / 2 * 2
 ```
 
 ```
@@ -81,6 +81,10 @@ pi * 2
 
 ```r
 ?mean
+```
+
+```
+## starting httpd help server ... done
 ```
 
 **9. Let's calculate the mean for the numbers 2, 8, 6, 4, 9, 10. I have built an object `x` for you below so all you need to do is run the first code chunk and then create a second code chunk that shows the calculation. Give it a try!**  
