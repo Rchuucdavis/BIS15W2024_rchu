@@ -27,8 +27,56 @@ library("jpeg")
 
 ## Warm-up
 1. Load the `bison.csv` data.
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+bison <- read_csv("data/bison.csv")
+```
+
 2. What are the dimesions and structure of the data?
+
+```{r}
+glimpse(bison)
+```
+
 3. We are only interested in code, sex, weight, year of birth. Restrict the data to these variables and store the dataframe as a new object.
+
+```{r}
+bison_2 <- select(bison, "animal_sex", "animal_weight", "animal_yob")
+bison_2
+```
+
 4. Pull out the animals born between 1980-1990.
+
+```{r}
+bison_1980s <- filter(bison_2, between(animal_yob, 1980, 1990))
+bison_1980s
+```
+
 5. How many male and female bison are represented between 1980-1990?
-6. Between 1980-1990, were males or females larger on average?
+
+```{r}
+bison_sex_count <- as.factor(bison_1980s$animal_sex)
+levels(bison_sex_count)
+table(bison_sex_count)
+```
+
+6. Between 1980-1990, were males or females larger on average? Males were larger on average. 
+
+```{r}
+bison_male <- filter(bison_1980s, animal_sex=="M")
+bison_female <- filter(bison_1980s, animal_sex=="F")
+```
+
+```{r}
+bison_male_weight <- (bison_male$animal_weight)
+mean(bison_male_weight)
+```
+
+```{r}
+bison_female_weight <- (bison_female$animal_weight)
+mean(bison_female_weight)
+```
