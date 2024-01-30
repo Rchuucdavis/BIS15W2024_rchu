@@ -3,9 +3,9 @@ title: "Lab 4 Homework"
 author: "Ryan Chu"
 date: "`r Sys.Date()`"
 output:
-  html_document:
+  html_document: 
     theme: spacelab
-    toc: no
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -51,7 +51,18 @@ summary(homerange)
 
 **3. Change the class of the variables `taxon` and `order` to factors and display their levels.**  
 ```{r}
+taxon_names <- as.factor(homerange$taxon)
+```
 
+```{r}
+order_names <- as.factor(homerange$order)
+```
+
+```{r}
+levels(taxon_names)
+```
+```{r}
+levels(order_names)
 ```
 
 **4. What taxa are represented in the `homerange` data frame? Make a new data frame `taxa` that is restricted to taxon, common name, class, order, family, genus, species.**  
@@ -62,36 +73,62 @@ taxa
 
 **5. The variable `taxon` identifies the common name groups of the species represented in `homerange`. Make a table the shows the counts for each of these `taxon`.**  
 ```{r}
-select(taxa, "taxon")
+table(homerange$taxon)
 ```
 
 **6. The species in `homerange` are also classified into trophic guilds. How many species are represented in each trophic guild.**  
 ```{r}
-select(homerange, "trophic.guild")
+table(homerange$trophic.guild)
 ```
 
 **7. Make two new data frames, one which is restricted to carnivores and another that is restricted to herbivores.**  
 ```{r}
-
+carnivores <- filter(homerange, trophic.guild=="carnivore")
+herbivores <- filter(homerange, trophic.guild=="herbivore")
 ```
 
-**8. Do herbivores or carnivores have, on average, a larger `mean.hra.m2`? Remove any NAs from the data.**  
+**8. Do herbivores or carnivores have, on average, a larger `mean.hra.m2`? Remove any NAs from the data.**  On average, herbivores have a largerer mean hra.m2. 
 ```{r}
-
+carnivores_hra <- (carnivores$mean.hra.m2)
+mean_carnivores_hra <- mean(carnivores_hra, na.rm=T)
+mean_carnivores_hra
 ```
 
 ```{r}
-
+herbivores_hra <- (herbivores$mean.hra.m2)
+mean_herbivores_hra <- mean(herbivores_hra, na.rm=T)
+mean_herbivores_hra
 ```
 
-**9. Make a new dataframe `owls` that is limited to the mean mass, log10 mass, family, genus, and species of owls in the database. Which is the smallest owl? What is its common name? Do a little bit of searching online to see what you can learn about this species and provide a link below** 
+**9. Make a new dataframe `owls` that is limited to the mean mass, log10 mass, family, genus, and species of owls in the database. Which is the smallest owl? What is its common name? Do a little bit of searching online to see what you can learn about this species and provide a link below** The smallest owl in the data is the Eurasian pygmy owl. https://animaldiversity.org/accounts/Glaucidium_passerinum/ 
 ```{r}
+owl_order <- filter(homerange, order=="strigiformes")
+owls <- select(owl_order, "mean.mass.g", "log10.mass", "family", "genus", "species") 
+owls
+```
 
+```{r}
+min(owls$mean.mass.g)
+```
+```{r}
+filter(owls, mean.mass.g == 61.32)
 ```
 
 **10. As measured by the data, which bird species has the largest homerange? Show all of your work, please. Look this species up online and tell me about it!**.  
-```{r}
 
+From the data, the caracara has the largest homerange. They are solitary birds that mainly feed on dead animals, but will also steal food from other birds and lizard and bird nests. They will also eat live prey given it is small enough, and mainly obtain them by finding animals displaced from their homes. 
+
+```{r}
+birds <- filter(homerange, taxon == "birds")
+birds
+```
+
+```{r}
+max(birds$mean.hra.m2)
+```
+
+```{r}
+filter(birds, mean.hra.m2 == 2.41e+08)
 ```
 
 ## Push your final code to GitHub!
