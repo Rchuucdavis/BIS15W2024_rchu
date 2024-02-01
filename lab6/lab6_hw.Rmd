@@ -155,7 +155,7 @@ favorite_superhero
 15. Can you find your hero in the superhero_info data? Show their info!  
 
 ```{r}
-filter(superhero_info, name=="Carnage")
+filter(superhero_info, name=="Carnage")   
 ```
 
 ## Push your final code to GitHub!
