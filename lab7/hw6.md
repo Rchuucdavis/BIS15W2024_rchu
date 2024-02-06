@@ -1,11 +1,11 @@
 ---
 title: "Homework 6"
-author: "Joel Ledford"
-date: "2024-02-03"
+author: "Ryan Chu"
+date: "2024-02-06"
 output:
   html_document: 
     theme: spacelab
-    keep_md: yes
+    keep_md: true
 ---
 
 
@@ -527,7 +527,7 @@ unique(fisheries_tidy$country)
 ## [199] Viet Nam                  Wallis and Futuna Is.    
 ## [201] Yemen                     Yugoslavia SFR           
 ## [203] Zanzibar                 
-## 204 Levels: Albania Algeria American Samoa Angola ... Zanzibar
+## 204 Levels: Saint Barth\xe9lemy R\xe9union C\xf4te d'Ivoire ... Zanzibar
 ```
 
 
@@ -558,81 +558,81 @@ levels(fisheries_tidy$country)
 ```
 
 ```
-##   [1] "Albania"                   "Algeria"                  
-##   [3] "American Samoa"            "Angola"                   
-##   [5] "Anguilla"                  "Antigua and Barbuda"      
-##   [7] "Argentina"                 "Aruba"                    
-##   [9] "Australia"                 "Bahamas"                  
-##  [11] "Bahrain"                   "Bangladesh"               
-##  [13] "Barbados"                  "Belgium"                  
-##  [15] "Belize"                    "Benin"                    
-##  [17] "Bermuda"                   "Bonaire/S.Eustatius/Saba" 
-##  [19] "Bosnia and Herzegovina"    "Brazil"                   
-##  [21] "British Indian Ocean Ter"  "British Virgin Islands"   
-##  [23] "Brunei Darussalam"         "Bulgaria"                 
-##  [25] "Cabo Verde"                "Cambodia"                 
-##  [27] "Cameroon"                  "Canada"                   
-##  [29] "Cayman Islands"            "Channel Islands"          
-##  [31] "Chile"                     "China"                    
-##  [33] "China, Hong Kong SAR"      "China, Macao SAR"         
-##  [35] "Colombia"                  "Comoros"                  
-##  [37] "Congo, Dem. Rep. of the"   "Congo, Republic of"       
-##  [39] "Cook Islands"              "Costa Rica"               
-##  [41] "Croatia"                   "Cuba"                     
-##  [43] "Cura\xe7ao"                "Cyprus"                   
-##  [45] "C\xf4te d'Ivoire"          "Denmark"                  
-##  [47] "Djibouti"                  "Dominica"                 
-##  [49] "Dominican Republic"        "Ecuador"                  
-##  [51] "Egypt"                     "El Salvador"              
-##  [53] "Equatorial Guinea"         "Eritrea"                  
-##  [55] "Estonia"                   "Ethiopia"                 
-##  [57] "Falkland Is.(Malvinas)"    "Faroe Islands"            
-##  [59] "Fiji, Republic of"         "Finland"                  
-##  [61] "France"                    "French Guiana"            
-##  [63] "French Polynesia"          "French Southern Terr"     
-##  [65] "Gabon"                     "Gambia"                   
-##  [67] "Georgia"                   "Germany"                  
-##  [69] "Ghana"                     "Gibraltar"                
-##  [71] "Greece"                    "Greenland"                
-##  [73] "Grenada"                   "Guadeloupe"               
-##  [75] "Guam"                      "Guatemala"                
-##  [77] "Guinea"                    "GuineaBissau"             
-##  [79] "Guyana"                    "Haiti"                    
-##  [81] "Honduras"                  "Iceland"                  
-##  [83] "India"                     "Indonesia"                
-##  [85] "Iran (Islamic Rep. of)"    "Iraq"                     
-##  [87] "Ireland"                   "Isle of Man"              
-##  [89] "Israel"                    "Italy"                    
-##  [91] "Jamaica"                   "Japan"                    
-##  [93] "Jordan"                    "Kenya"                    
-##  [95] "Kiribati"                  "Korea, Dem. People's Rep" 
-##  [97] "Korea, Republic of"        "Kuwait"                   
-##  [99] "Latvia"                    "Lebanon"                  
-## [101] "Liberia"                   "Libya"                    
-## [103] "Lithuania"                 "Madagascar"               
-## [105] "Malaysia"                  "Maldives"                 
-## [107] "Malta"                     "Marshall Islands"         
-## [109] "Martinique"                "Mauritania"               
-## [111] "Mauritius"                 "Mayotte"                  
-## [113] "Mexico"                    "Micronesia, Fed.States of"
-## [115] "Monaco"                    "Montenegro"               
-## [117] "Montserrat"                "Morocco"                  
-## [119] "Mozambique"                "Myanmar"                  
-## [121] "Namibia"                   "Nauru"                    
-## [123] "Netherlands"               "Netherlands Antilles"     
-## [125] "New Caledonia"             "New Zealand"              
-## [127] "Nicaragua"                 "Nigeria"                  
-## [129] "Niue"                      "Norfolk Island"           
-## [131] "Northern Mariana Is."      "Norway"                   
-## [133] "Oman"                      "Other nei"                
-## [135] "Pakistan"                  "Palau"                    
-## [137] "Palestine, Occupied Tr."   "Panama"                   
-## [139] "Papua New Guinea"          "Peru"                     
-## [141] "Philippines"               "Pitcairn Islands"         
-## [143] "Poland"                    "Portugal"                 
-## [145] "Puerto Rico"               "Qatar"                    
-## [147] "Romania"                   "Russian Federation"       
-## [149] "R\xe9union"                "Saint Barth\xe9lemy"      
+##   [1] "Saint Barth\xe9lemy"       "R\xe9union"               
+##   [3] "C\xf4te d'Ivoire"          "Cura\xe7ao"               
+##   [5] "Albania"                   "Algeria"                  
+##   [7] "American Samoa"            "Angola"                   
+##   [9] "Anguilla"                  "Antigua and Barbuda"      
+##  [11] "Argentina"                 "Aruba"                    
+##  [13] "Australia"                 "Bahamas"                  
+##  [15] "Bahrain"                   "Bangladesh"               
+##  [17] "Barbados"                  "Belgium"                  
+##  [19] "Belize"                    "Benin"                    
+##  [21] "Bermuda"                   "Bonaire/S.Eustatius/Saba" 
+##  [23] "Bosnia and Herzegovina"    "Brazil"                   
+##  [25] "British Indian Ocean Ter"  "British Virgin Islands"   
+##  [27] "Brunei Darussalam"         "Bulgaria"                 
+##  [29] "Cabo Verde"                "Cambodia"                 
+##  [31] "Cameroon"                  "Canada"                   
+##  [33] "Cayman Islands"            "Channel Islands"          
+##  [35] "Chile"                     "China"                    
+##  [37] "China, Hong Kong SAR"      "China, Macao SAR"         
+##  [39] "Colombia"                  "Comoros"                  
+##  [41] "Congo, Dem. Rep. of the"   "Congo, Republic of"       
+##  [43] "Cook Islands"              "Costa Rica"               
+##  [45] "Croatia"                   "Cuba"                     
+##  [47] "Cyprus"                    "Denmark"                  
+##  [49] "Djibouti"                  "Dominica"                 
+##  [51] "Dominican Republic"        "Ecuador"                  
+##  [53] "Egypt"                     "El Salvador"              
+##  [55] "Equatorial Guinea"         "Eritrea"                  
+##  [57] "Estonia"                   "Ethiopia"                 
+##  [59] "Falkland Is.(Malvinas)"    "Faroe Islands"            
+##  [61] "Fiji, Republic of"         "Finland"                  
+##  [63] "France"                    "French Guiana"            
+##  [65] "French Polynesia"          "French Southern Terr"     
+##  [67] "Gabon"                     "Gambia"                   
+##  [69] "Georgia"                   "Germany"                  
+##  [71] "Ghana"                     "Gibraltar"                
+##  [73] "Greece"                    "Greenland"                
+##  [75] "Grenada"                   "Guadeloupe"               
+##  [77] "Guam"                      "Guatemala"                
+##  [79] "Guinea"                    "GuineaBissau"             
+##  [81] "Guyana"                    "Haiti"                    
+##  [83] "Honduras"                  "Iceland"                  
+##  [85] "India"                     "Indonesia"                
+##  [87] "Iran (Islamic Rep. of)"    "Iraq"                     
+##  [89] "Ireland"                   "Isle of Man"              
+##  [91] "Israel"                    "Italy"                    
+##  [93] "Jamaica"                   "Japan"                    
+##  [95] "Jordan"                    "Kenya"                    
+##  [97] "Kiribati"                  "Korea, Dem. People's Rep" 
+##  [99] "Korea, Republic of"        "Kuwait"                   
+## [101] "Latvia"                    "Lebanon"                  
+## [103] "Liberia"                   "Libya"                    
+## [105] "Lithuania"                 "Madagascar"               
+## [107] "Malaysia"                  "Maldives"                 
+## [109] "Malta"                     "Marshall Islands"         
+## [111] "Martinique"                "Mauritania"               
+## [113] "Mauritius"                 "Mayotte"                  
+## [115] "Mexico"                    "Micronesia, Fed.States of"
+## [117] "Monaco"                    "Montenegro"               
+## [119] "Montserrat"                "Morocco"                  
+## [121] "Mozambique"                "Myanmar"                  
+## [123] "Namibia"                   "Nauru"                    
+## [125] "Netherlands"               "Netherlands Antilles"     
+## [127] "New Caledonia"             "New Zealand"              
+## [129] "Nicaragua"                 "Nigeria"                  
+## [131] "Niue"                      "Norfolk Island"           
+## [133] "Northern Mariana Is."      "Norway"                   
+## [135] "Oman"                      "Other nei"                
+## [137] "Pakistan"                  "Palau"                    
+## [139] "Palestine, Occupied Tr."   "Panama"                   
+## [141] "Papua New Guinea"          "Peru"                     
+## [143] "Philippines"               "Pitcairn Islands"         
+## [145] "Poland"                    "Portugal"                 
+## [147] "Puerto Rico"               "Qatar"                    
+## [149] "Romania"                   "Russian Federation"       
 ## [151] "Saint Helena"              "Saint Kitts and Nevis"    
 ## [153] "Saint Lucia"               "Saint Vincent/Grenadines" 
 ## [155] "SaintMartin"               "Samoa"                    
@@ -704,6 +704,9 @@ fisheries_tidy_focused %>%
 
 6. Which country had the largest overall catch in the year 2000?
 
+China 
+
+
 ```r
 fisheries_tidy_focused %>% 
   filter(year==2000) %>%
@@ -730,6 +733,9 @@ fisheries_tidy_focused %>%
 ```
 
 7. Which country caught the most sardines (_Sardina pilchardus_) between the years 1990-2000?
+
+Peru 
+
 
 ```r
 fisheries_tidy_focused %>% 
@@ -825,6 +831,9 @@ sardines2 %>%
 
 8. Which five countries caught the most cephalopods between 2008-2012?
 
+China, Korea, Peru, Japan, Chile
+
+
 ```r
 fisheries_tidy_focused %>% 
   filter(str_detect(isscaap_taxonomic_group, "Squids")) %>% 
@@ -877,6 +886,9 @@ fisheries_tidy_focused %>%
 
 9. Which species had the highest catch total between 2008-2012? (hint: Osteichthyes is not a species)
 
+Theraga chalcrogramma
+
+
 ```r
 fisheries_tidy_focused %>% 
   filter(year>=2008 & year<=2012)%>% 
@@ -903,6 +915,36 @@ fisheries_tidy_focused %>%
 ```
 
 10. Use the data to do at least one analysis of your choice.
+
+What year were the most sharks caught?
+
+
+```r
+fisheries_tidy_focused %>%
+  filter(str_detect(isscaap_taxonomic_group, "Sharks")) %>%
+  group_by(year) %>%
+  arrange(desc(catch))
+```
+
+```
+## # A tibble: 23,210 × 6
+## # Groups:   year [63]
+##    country  isscaap_taxonomic_gr…¹ asfis_species_name asfis_species_number  year
+##    <fct>    <chr>                  <chr>              <fct>                <dbl>
+##  1 Chile    Sharks, rays, chimaer… Squalus acanthias  1090100704            2010
+##  2 China    Sharks, rays, chimaer… Isurus oxyrinchus  1060800201            2007
+##  3 Congo, … Sharks, rays, chimaer… Rajiformes         110XXXXXXX            2008
+##  4 Denmark  Sharks, rays, chimaer… Raja spp           11004001XX            1985
+##  5 France   Sharks, rays, chimaer… Raja spp           11004001XX            1978
+##  6 Greece   Sharks, rays, chimaer… Mustelus spp       10804007XX            1985
+##  7 Indones… Sharks, rays, chimaer… Dasyatidae         11005XXXXX            2007
+##  8 Italy    Sharks, rays, chimaer… Squalidae          10901XXXXX            2007
+##  9 Japan    Sharks, rays, chimaer… Elasmobranchii     199XXXXXXX054         1997
+## 10 Liberia  Sharks, rays, chimaer… Carcharhinus falc… 1080201017            2000
+## # ℹ 23,200 more rows
+## # ℹ abbreviated name: ¹​isscaap_taxonomic_group
+## # ℹ 1 more variable: catch <dbl>
+```
 
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences.   
