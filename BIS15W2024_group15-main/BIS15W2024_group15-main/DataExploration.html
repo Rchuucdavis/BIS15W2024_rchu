@@ -903,6 +903,96 @@ shinyApp(ui, server)</code></pre>
 ##  9 TibetanMastiff                70.3 CT              
 ## 10 TibetanMastiff                70.3 CT              
 ## # ℹ 828 more rows</code></pre>
+<pre class="r"><code>dog %&gt;% 
+       group_by(breed) %&gt;% 
+        summarize(mean_height = mean(height_cm, na.rm = T), igf1_as_genotype) %&gt;% 
+        filter(mean_height != &quot;NaN&quot;) %&gt;% 
+        arrange(desc(mean_height))</code></pre>
+<pre><code>## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;breed&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 805 × 3
+## # Groups:   breed [178]
+##    breed             mean_height igf1_as_genotype
+##    &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;           
+##  1 GreatDane                78.7 TT              
+##  2 GreatDane                78.7 TT              
+##  3 GreatDane                78.7 TT              
+##  4 GreatDane                78.7 TT              
+##  5 GreatDane                78.7 TT              
+##  6 IrishWolfhound           78.7 TT              
+##  7 ScottishDeerhound        74.9 TT              
+##  8 ScottishDeerhound        74.9 TT              
+##  9 ScottishDeerhound        74.9 TT              
+## 10 ScottishDeerhound        74.9 TT              
+## # ℹ 795 more rows</code></pre>
+</div>
+<div id="igf1-of-smallest-dogs" class="section level2">
+<h2>IGF1 of smallest dogs</h2>
+<pre class="r"><code>dog %&gt;%
+  group_by(breed) %&gt;%
+  summarize(mean_body_weight = mean(body_mass_kg, na.rm = T), igf1_as_genotype) %&gt;% 
+  filter(mean_body_weight != &quot;NaN&quot;) %&gt;% 
+  arrange(mean_body_weight)</code></pre>
+<pre><code>## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;breed&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 838 × 3
+## # Groups:   breed [184]
+##    breed         mean_body_weight igf1_as_genotype
+##    &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;           
+##  1 Chihuahua                  1.8 CC              
+##  2 Chihuahua                  1.8 CC              
+##  3 Chihuahua                  1.8 CC              
+##  4 Pomeranian                 2.7 CC              
+##  5 Pomeranian                 2.7 CC              
+##  6 BiewerTerrier              3   CC              
+##  7 BiewerTerrier              3   CC              
+##  8 BiewerTerrier              3   CC              
+##  9 BiewerTerrier              3   CC              
+## 10 BiewerTerrier              3   CC              
+## # ℹ 828 more rows</code></pre>
+<pre class="r"><code>dog %&gt;% 
+       group_by(breed) %&gt;% 
+        summarize(mean_height = mean(height_cm, na.rm = T), igf1_as_genotype) %&gt;% 
+        filter(mean_height != &quot;NaN&quot;) %&gt;% 
+        arrange(mean_height)</code></pre>
+<pre><code>## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;breed&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 805 × 3
+## # Groups:   breed [178]
+##    breed            mean_height igf1_as_genotype
+##    &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;           
+##  1 YorkshireTerrier        16.5 CC              
+##  2 YorkshireTerrier        16.5 CC              
+##  3 YorkshireTerrier        16.5 CC              
+##  4 YorkshireTerrier        16.5 CC              
+##  5 YorkshireTerrier        16.5 CC              
+##  6 YorkshireTerrier        16.5 CC              
+##  7 YorkshireTerrier        16.5 CC              
+##  8 YorkshireTerrier        16.5 CC              
+##  9 YorkshireTerrier        16.5 CC              
+## 10 YorkshireTerrier        16.5 CC              
+## # ℹ 795 more rows</code></pre>
 </div>
 </div>
 

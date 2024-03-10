@@ -2,7 +2,7 @@
 title: "Data Exploration and Processing"
 output: 
   html_document: 
-    keep_md: yes
+    keep_md: true
 date: "2024-03-05"
 ---
 
@@ -776,4 +776,129 @@ dog %>%
 ```
 
 
+```r
+dog %>% 
+       group_by(breed) %>% 
+        summarize(mean_height = mean(height_cm, na.rm = T), igf1_as_genotype) %>% 
+        filter(mean_height != "NaN") %>% 
+        arrange(desc(mean_height))
+```
 
+```
+## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## `summarise()` has grouped output by 'breed'. You can override using the
+## `.groups` argument.
+```
+
+```
+## # A tibble: 805 × 3
+## # Groups:   breed [178]
+##    breed             mean_height igf1_as_genotype
+##    <chr>                   <dbl> <chr>           
+##  1 GreatDane                78.7 TT              
+##  2 GreatDane                78.7 TT              
+##  3 GreatDane                78.7 TT              
+##  4 GreatDane                78.7 TT              
+##  5 GreatDane                78.7 TT              
+##  6 IrishWolfhound           78.7 TT              
+##  7 ScottishDeerhound        74.9 TT              
+##  8 ScottishDeerhound        74.9 TT              
+##  9 ScottishDeerhound        74.9 TT              
+## 10 ScottishDeerhound        74.9 TT              
+## # ℹ 795 more rows
+```
+
+## IGF1 of smallest dogs
+
+
+```r
+dog %>%
+  group_by(breed) %>%
+  summarize(mean_body_weight = mean(body_mass_kg, na.rm = T), igf1_as_genotype) %>% 
+  filter(mean_body_weight != "NaN") %>% 
+  arrange(mean_body_weight)
+```
+
+```
+## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## `summarise()` has grouped output by 'breed'. You can override using the
+## `.groups` argument.
+```
+
+```
+## # A tibble: 838 × 3
+## # Groups:   breed [184]
+##    breed         mean_body_weight igf1_as_genotype
+##    <chr>                    <dbl> <chr>           
+##  1 Chihuahua                  1.8 CC              
+##  2 Chihuahua                  1.8 CC              
+##  3 Chihuahua                  1.8 CC              
+##  4 Pomeranian                 2.7 CC              
+##  5 Pomeranian                 2.7 CC              
+##  6 BiewerTerrier              3   CC              
+##  7 BiewerTerrier              3   CC              
+##  8 BiewerTerrier              3   CC              
+##  9 BiewerTerrier              3   CC              
+## 10 BiewerTerrier              3   CC              
+## # ℹ 828 more rows
+```
+
+
+```r
+dog %>% 
+       group_by(breed) %>% 
+        summarize(mean_height = mean(height_cm, na.rm = T), igf1_as_genotype) %>% 
+        filter(mean_height != "NaN") %>% 
+        arrange(mean_height)
+```
+
+```
+## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## `summarise()` has grouped output by 'breed'. You can override using the
+## `.groups` argument.
+```
+
+```
+## # A tibble: 805 × 3
+## # Groups:   breed [178]
+##    breed            mean_height igf1_as_genotype
+##    <chr>                  <dbl> <chr>           
+##  1 YorkshireTerrier        16.5 CC              
+##  2 YorkshireTerrier        16.5 CC              
+##  3 YorkshireTerrier        16.5 CC              
+##  4 YorkshireTerrier        16.5 CC              
+##  5 YorkshireTerrier        16.5 CC              
+##  6 YorkshireTerrier        16.5 CC              
+##  7 YorkshireTerrier        16.5 CC              
+##  8 YorkshireTerrier        16.5 CC              
+##  9 YorkshireTerrier        16.5 CC              
+## 10 YorkshireTerrier        16.5 CC              
+## # ℹ 795 more rows
+```

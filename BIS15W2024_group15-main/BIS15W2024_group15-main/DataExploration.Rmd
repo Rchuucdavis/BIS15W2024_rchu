@@ -2,7 +2,7 @@
 title: "Data Exploration and Processing"
 output: 
   html_document: 
-    keep_md: yes
+    keep_md: true
 date: "2024-03-05"
 ---
 
